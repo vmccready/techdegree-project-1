@@ -88,12 +88,12 @@ function printQuote() {
 
   // Start timer to refresh quote
   clearTimeout(timeout); //clear timeout so we don't have multiple timers
-  timeout = setTimeout(function(){printQuote();}, 10000);
+  timeout = setTimeout(function(){printQuote();}, 20000);
 }
 
 
 // Start timer to refresh quote
-var timeout =setTimeout(function(){printQuote();}, 10000);
+var timeout =setTimeout(function(){printQuote();}, 20000);
 
 
 // loads new quote when button is clicked
