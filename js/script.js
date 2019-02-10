@@ -12,7 +12,6 @@ var quotes = [
       "It is enough if one tries merely to comprehend a little of this mystery each day.",
       citation: "Old Man's Advice to Youth: 'Never Lose a Holy Curiosity.' LIFE Magazine (2 May 1955) p. 64",
       source: "Albert Einstein",
-      year: 1955,
       tags: ['science', 'philosophy']
   },
   {
@@ -68,7 +67,7 @@ function printQuote() {
 
   //create string
   html += '<p class="quote">' + quoteToPrint.quote+ '</p>';
-  html += '<p class="source">' + quoteToPrint.source + '</p>';
+  html += '<p class="source">' + quoteToPrint.source;
   if ('citation' in quoteToPrint){html += '<span class="citation">' + quoteToPrint.citation + '</span>';}
   if ('year' in quoteToPrint){html += '<span class="year">' + quoteToPrint.year + '</span>';}
   if ('tags' in quoteToPrint){
