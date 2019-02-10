@@ -43,6 +43,20 @@ function getRandomQuote() {
   return quotes[randomNum];
 }
 
+// Change background to random color
+function changeBackgroundColor() {
+  // create color
+  var rgb = [];
+  for(i = 0; i < 4; i++){
+    rgb[i] = Math.floor(Math.random()*255);
+  }
+
+  //change background
+  document.body.style.backgroundColor = 'rgba('+ rgb[0]+', '+ rgb[1]+', '+ rgb[2]+', '+ rgb[3]+')';
+  document.getElementById('loadQuote').style.backgroundColor = 'rgba('+ rgb[0]+', '+ rgb[1]+', '+ rgb[2]+', '+ rgb[3]+')';
+}
+
+
 // Creates an HTML string and sets innerHTML of 'quote-box' div
 function printQuote() {
   var quoteToPrint = getRandomQuote();
@@ -56,6 +70,8 @@ function printQuote() {
   html += '</p>';
 
   document.getElementById('quote-box').innerHTML = html;
+
+  changeBackgroundColor();
 }
 
 // loads new quote when button is clicked
