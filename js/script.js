@@ -70,6 +70,8 @@ function printQuote() {
   html += '<p class="source">' + quoteToPrint.source;
   if ('citation' in quoteToPrint){html += '<span class="citation">' + quoteToPrint.citation + '</span>';}
   if ('year' in quoteToPrint){html += '<span class="year">' + quoteToPrint.year + '</span>';}
+
+  //loops through and adds all tags to html
   if ('tags' in quoteToPrint){
     var tag;
     html += '<span class="year">';
